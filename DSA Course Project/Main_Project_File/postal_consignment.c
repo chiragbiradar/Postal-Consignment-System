@@ -11,6 +11,10 @@
 
 #define NOC 100
 
+
+
+
+struct city_info ci[1000];
 int graph[NOC][NOC];
 
 
@@ -25,14 +29,14 @@ struct city_info
 
 struct post_info
 {
-    int speed_rating;
-    char departure_place[20],destination_place[20];
+    int speed_rating,post_weight,destination_place,departure_place;
+   //! char [20],[20];
 };
 
 
 //Generates and prints 'count' random
 // numbers in range [lower, upper].
-int printRandoms_o(int lower, int upper,int count)
+int printRandoms_0(int lower, int upper,int count)
 {
 	int i;
 	for (i = 0; i < count; i++) {
@@ -67,7 +71,7 @@ void printPath(int parent[], int j)
 
 	printPath(parent, parent[j]);
 
-	printf("%d-> ", j);
+	printf("%s-> ", ci[j].name);
 }
 
 int printSolution(int dist[], int n,int parent[],int dest)
@@ -120,7 +124,6 @@ void dijkstra(int graph[NOC][NOC], int src,int dest)
 
 int main()
 {
-    struct city_info ci[100];
     FILE *fptr = fopen("city_names.txt", "r");
 
     if (fptr == NULL)
@@ -156,16 +159,25 @@ int main()
 
 
 srand(time(0));
+
+
 int no_of_deliveries=printRandoms_0(20, 100, 1);
-struct post_info PI[no_of_deliveries];
+
+
+struct post_info PI[100];
+
+
 for(int start=0;start<no_of_deliveries;start++)
 {
-        PI[start]..
-    
+        PI[start].departure_place=printRandoms_0(0,100,1);
+		PI[start].destination_place=printRandoms_0(0,100,1);
+		PI[start].post_weight=printRandoms_0(1,1000,1);
+		PI[start].speed_rating=printRandoms_0(0,10,1);
 
 
+ 
 
-dijkstra(graph,)
+dijkstra(graph,PI[start].departure_place,PI[start].destination_place);
 
 }
 
