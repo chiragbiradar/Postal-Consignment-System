@@ -56,7 +56,7 @@ int first_fit_decreasing(int weight[],int n,int c)
 int main()
 {
     int no_of_weights;
-   // printf("Enter the size of the bin = \n");
+   //printf("Enter the size of the bin = \n");
     //scanf("%d",&size_of_bin);
     printf("Enter the no_of_weights to be placed = \n");
     scanf("%d",&no_of_weights);
