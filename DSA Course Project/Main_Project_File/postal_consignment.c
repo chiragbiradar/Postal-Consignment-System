@@ -6,28 +6,70 @@
 #include <stdbool.h>
 
 #define INFINITY 9999
-#define size_of_bin 100
+#define size_of_bin 500
 
 #define NOC 100
 
 int graph[NOC][NOC];
 int no_of_deliveries;
 
-void sort(int arr[], int n)
+
+// function to swap elements
+void swap(int *a, int *b) {
+  int t = *a;
+  *a = *b;
+  *b = t;
+}
+
+
+void rvereseArray(int arr[], int start, int end)
 {
-	int temp = 0;
-	for (int i = 0; i < n; i++)
-	{
-		for (int j = i + 1; j < n; j++)
-		{
-			if (arr[i] < arr[j])
-			{
-				temp = arr[i];
-				arr[i] = arr[j];
-				arr[j] = temp;
-			}
-		}
-	}
+    while (start < end)
+    {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+}
+
+
+
+// function to find the partition position
+int partition(int array[], int low, int high) {
+  
+
+  int pivot = array[high];
+  int i = (low - 1);
+
+
+  for (int j = low; j < high; j++) {
+    if (array[j] <= pivot) {
+        
+      i++;
+      
+      swap(&array[i], &array[j]);
+    }
+  }
+
+ 
+  swap(&array[i + 1], &array[high]);
+  
+ 
+  return (i + 1);
+}
+
+void quickSort(int array[], int low, int high) {
+  if (low < high) {
+    
+    
+    int pi = partition(array, low, high);
+    quickSort(array, low, pi - 1);
+    
+ 
+    quickSort(array, pi + 1, high);
+  }
 }
 
 int first_fit(int weight[], int n)
@@ -57,7 +99,8 @@ int first_fit(int weight[], int n)
 
 int first_fit_decreasing(int weight[], int n)
 {
-	sort(weight, n);
+	quickSort(weight, 0,n);
+	rvereseArray(weight,0,n-1);
 	int soln = first_fit(weight, n);
 	return soln;
 }
@@ -91,6 +134,13 @@ int printRandoms_0(int lower, int upper, int count)
 		num = (rand() % (upper - lower + 1)) + lower;
 	}
 	return num;
+}
+
+
+
+void purple()
+{
+	printf("\033[0;35m");
 }
 
 void green()
@@ -172,6 +222,9 @@ void dijkstra(int graph[NOC][NOC], int n, int startnode, int endnode)
 		yellow();
 		printf("\nShortest Distance from %s to %s = %d kms", ci[startnode].name, ci[endnode].name, distance[endnode]);
 		reset();
+		purple();
+		printf("\nThe minimum time required to reach the post to its destination is %d hrs",distance[endnode]/100);
+		reset();
 		printf("\nPath =");
 		red();
 		printf(" %s", ci[endnode].name);
@@ -223,8 +276,9 @@ int main()
 	no_of_deliveries = printRandoms_0(20, 100, 1);
 
 	struct post_info PI[100];
-    int rept[no_of_deliveries][no_of_deliveries];
-	printf("No of posts = %d\n", no_of_deliveries);
+	printf("\n\n====================================");
+	printf("\n||  No of posts = %d              ||\n", no_of_deliveries);
+	printf("====================================");
 
 	int *weight;
 	weight = (int *)malloc(no_of_deliveries * sizeof(int));
@@ -246,12 +300,10 @@ int main()
 			PI[start].speed_rating = printRandoms_0(0, 10, 1);
 			weight[start] = PI[start].post_weight;
 
-			// dijkstra(graph, 100, PI[start].departure_place, PI[start].destination_place);
-			// printf("\n");
+			dijkstra(graph, 100, PI[start].departure_place, PI[start].destination_place);
+			printf("\n");
 		}
 	}
-
-
 	white();
 	printf("\n========================================================================================\n");
 	printf("||");
