@@ -22,3 +22,7 @@ We need to store the data of the posts and the distance between the cities . dat
 
 ### 3. All the input part is stored in FILE memory where data can be read or written from the file whenever required.
 
+
+
+![image](https://user-images.githubusercontent.com/78417411/200106762-254aee93-7e06-4651-a9b0-23dfe70183b5.png)
+
