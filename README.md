@@ -18,7 +18,7 @@ But this algorithm is more efficient in this case. It makes him save time by t
 
 ### 2. Array/Linked List
 We need to store the data of the posts and the distance between the cities . data structures like arrays , linked list are used to store the data.
-![image](https://user-images.githubusercontent.com/78417411/200105160-32592fbb-5731-4982-8bac-83f9e60a7fe6.png)
+![Screenshot (177)](https://user-images.githubusercontent.com/83945477/200163619-053aa6af-e2b4-4932-900d-63c0b95c8805.png)
 
 ### 3. All the input part is stored in FILE memory where data can be read or written from the file whenever required.
 
