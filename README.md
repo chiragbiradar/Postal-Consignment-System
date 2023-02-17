@@ -1,5 +1,15 @@
 # Postal Consignment System
 
+## Contributers
+[Jaswanth Reddy](https://github.com/jaswanth2003)
+
+[Chirag Biradar](https://github.com/chiragbiradar)
+
+[B Ajay Kushal](https://github.com/ajaykushal4)
+
+[Bharath Sai](https://github.com/chiragbiradar)
+
+
 ## Problem Statement
 For many years, the department of posts (DoP) has been the backbone of the  country’s communication and has played a crucial role in the country’s social-economic development. It touches the lives of Indian citizens in many ways. India  has the largest postal network in the world
 with more than 1,55,000 post offices and more than 5,66,000 employees.There are huge number of posts to be supplied to various destinations across the country. Also segregation of posts need to be done according to the city.
