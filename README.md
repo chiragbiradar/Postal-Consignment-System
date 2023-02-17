@@ -1,9 +1,9 @@
 # Postal Consignment System
 
 ## Contributers
-[Jaswanth Reddy](https://github.com/jaswanth2003)
-
 [Chirag Biradar](https://github.com/chiragbiradar)
+
+[Jaswanth Reddy](https://github.com/jaswanth2003)
 
 [B Ajay Kushal](https://github.com/ajaykushal4)
 
