@@ -23,8 +23,7 @@ with more than 1,55,000 post offices and more than 5,66,000 employees.There are 
 
 ## Solution for Pain Points
 ### 1 .Dijkstra's algorithm
-Finding the shortest path can be found by many ways 
-But this algorithm is more efficient in this case. It makes him save time by travelling in the shortest path which could make him deliver posts on time perfectly.
+Dijkstra's algorithm is a famous and widely used graph traversal algorithm for finding the shortest path between nodes in a weighted graph. This algorithm was developed by Dutch computer scientist Edsger W. Dijkstra in 1956 and is often used in routing and as a subroutine in other graph algorithms. It is a greedy algorithm that works by selecting the node with the lowest distance from the source node and updating the distances of its neighbors. The algorithm maintains a set of visited nodes and a priority queue of nodes to be explored. The complexity of the algorithm is O((E+V)logV) in the worst case, where E is the number of edges and V is the number of vertices in the graph. Despite its efficiency, Dijkstra's algorithm may not work correctly if the graph contains negative-weight edges, as it assumes non-negative weights. Overall, Dijkstra's algorithm is a fundamental algorithm in computer science and plays a crucial role in solving many practical problems.
 
 ### 2. Array/Linked List
 We need to store the data of the posts and the distance between the cities . data structures like arrays , linked list are used to store the data.
