@@ -7,8 +7,6 @@
 
 [B Ajay Kushal](https://github.com/ajaykushal4)
 
-[Bharath Sai](https://github.com/chiragbiradar)
-
 
 ## Problem Statement
 For many years, the department of posts (DoP) has been the backbone of the  country’s communication and has played a crucial role in the country’s social-economic development. It touches the lives of Indian citizens in many ways. India  has the largest postal network in the world
